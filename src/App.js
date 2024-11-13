@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <a 
-          href="/PHP-PDO-SQLite-1%20(1)/index.html" 
+          href="/PHP-PDO-SQLite-1%20(1)/index.php" 
           target="_blank" 
           rel="noopener noreferrer"
         >
