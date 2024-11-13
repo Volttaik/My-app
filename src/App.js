@@ -5,8 +5,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>By Devatron!</h1>
-        <p>This is your custom app, ready to be deployed and installed.</p>
+        <a 
+          href="/PHP-PDO-SQLite-1%20(1)/index.html" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Open PHP-PDO-SQLite-1 (1) Index
+        </a>
       </header>
     </div>
   );
