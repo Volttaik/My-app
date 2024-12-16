@@ -1,0 +1,406 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --text-color: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    width: 90vw; /* 90% of the viewport width */
+    height: 100%; /* Full height */
+    margin: 0 auto; /* Center the container */
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0;
+    color: blue;
+    font-size: 0.9em;
+}
+
+.header img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.profile-section {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.profile-section img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.balance-container {
+    position: relative;
+    z-index: 1;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width:90vw;
+    margin-bottom: -60px;
+}
+
+.balance-details {
+    text-align: left;
+}
+
+.actions {
+    text-align: right;
+}
+
+.balance {
+    font-size: 1.2em;
+}
+
+.account-number {
+    font-size: 0.7em;
+    color: black;
+}
+
+.actions button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.actions button:hover {
+    background-color: var(--primary-color);
+}
+
+.icons-container {
+    background-color: #ffffff;
+    padding: 7px;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 94vw; /* 90% of the viewport width */
+    max-width: 380px; /* Maximum width to prevent it from becoming too large */
+    min-width: 320px; /* Minimum width for smaller screens */
+    margin: 0 auto; /* Center the container */
+
+}
+
+.icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.icons-grid img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.info-box {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-box img {
+    width: 30px;
+    height: 30px;
+}
+
+.recent-transactions-container {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 1000px; /* Increased width */
+    width:95%;
+    height:27vh;
+    font-size: 0.8em;
+ }
+
+.recent-transactions {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 20px 20px;
+    width: 100vw;
+    max-width: 1000px; /* Increased width */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.8em;
+}
+
+.recent-transactions h2 {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.recent-transactions .transaction-item {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.8em;
+    color: #333;
+}
+
+.recent-transactions .transaction-item:last-child {
+    border-bottom: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.footer img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer .icons-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer .icons-row a {
+    text-align: center;
+}
+
+.footer .icons-row img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.footer .icons-row img:hover {
+    transform: scale(1.2);
+}
+
+.user-id-section {
+    padding: 8px 0;
+    background-color: #f8f8f8;
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    background-color: #F5F5F5;
+    margin: 0;
+}
+.footer .icons-row a img {
+  margin: 0 30px; /* Adds horizontal space between images */
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the header is above other content */
+  background-color: #ffffff; /* Adjust to your desired header background color */
+  padding: 7px 7px; /* Reduced padding to decrease height */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+}
+
+/* To prevent the header from overlapping content */
+.body {
+  margin-top: 20px; /* Adjust this value to match the height of your header */
+}
+
+.balance-container {
+    margin-top:70px; /* Pushes the whole balance container down */
+    padding: 20px;
+    background-color:#e7f3ff; /* Adjust the background color if needed */
+    border-radius: 10px; /* Optional for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional for shadow */
+}
+
+.balance {
+    color:black;   
+    font-size: 16px; /* Adjust font size */
+}
+
+.balance small {
+    font-size: 12px; /* Smaller text for 'Available Balance' */
+    color:black; /* Lighter color for small text */
+}
+
+.account-number {
+    font-size: 10px;
+    color:grey;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions button {
+    background-color:#007bff;; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.actions button:hover {
+    background-color: #2980b9;
+}
+.header {
+  position: fixed;
+  top: 7px; /* Pushes the header slightly down */
+  width: 100%; /* Reduces the header width */
+  z-index: 1000; /* Keeps it above other elements */
+  background-color: #ffffff; /* Header background color */
+  padding: 2px; /* Adjust padding to ensure content fits */
+  box-sizing: border-box; /* Ensures padding is included in width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+ .icon-name{
+   font-size:10px;
+{
+.balance-container {
+    margin-top:70px; /* Pushes the whole balance container down */
+    padding: 20px;
+    background-color:#e7f3ff; /* Adjust the background color if needed */
+    border-radius: 10px; /* Optional for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional for shadow */
+}
+
+.balance {
+    color:black;
+    font-size: 16px; /* Adjust font size */
+}
+
+.balance small {
+    font-size: 12px; /* Smaller text for 'Available Balance' */
+    color:black; /* Lighter color for small text */
+}
+
+.account-number {
+    font-size: 10px;
+    color:grey;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions button {
+    background-color:#007bff;; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.actions button:hover {
+    background-color: #2980b9;
+}
+.icon {
+  font-size: 36px; /* Adjust the size as needed */
+}
+.icon {
+  color: red; /* You can use any color name, hex code, or RGB */
+}
+/* Set all icons to 30px size and black color */
+.icon-large {
+    font-size: 30px;
+    color: #000000;  /* Set all icons to black */
+    transition: color 0.3s ease; /* Optional: smooth transition on hover */
+}
+
+/* Optional: Add hover effect (change color on hover) */
+.icon-large:hover {
+    color: #333333;  /* Slightly lighter black on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Optional: Ensure the icon containers have a consistent size and are centered */
+.icon-item {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.icon-item i {
+    display: block;
+    margin-bottom: 5px; /* Space between the icon and the text */
+}
+
+.header-icons .header-icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color: black;
+}
+
+.footer-icons .footer-icon {
+    margin: 0 15px;
+    font-size: 20px;
+    color: black;
+}

@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #000000;  /* Updated text color to black */
+}
+
+/* Container */
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;                                                                                       align-items: center;
+    padding: 15px;
+    background-color: #e7f3ff;  /* Updated header background */
+    color: black;  /* Text color changed to black */
+    border-radius: 10px;  /* Rounded corners for header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* Subtle shadow effect */
+}
+
+.header h1 {
+    font-size: 20px;  /* Increased font size for better readability */
+    margin: 0;
+    font-weight: 600;  /* Slightly bolder font */                                                                     }
+                                                                                                                      .header-icons .icon {
+    margin-left: 10px;                                                                                                    background: none;
+    border: none;                                                                                                         font-size: 22px;  /* Larger icon size */
+    cursor: pointer;
+    color: #add8e6;  /* Light blue icon color */
+}
+
+.header-icons .icon:hover {
+    color: #003f89;  /* Blue color on hover for icons */
+}
+
+/* Back button */
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 22px;  /* Larger font size for the back button */
+    cursor: pointer;
+    color: black;  /* Back button text color changed to black */
+}
+
+.back-btn:hover {
+    color: #003f89;  /* Blue color on hover for back button */
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    margin: 10px 0;
+    background: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.tab.active {                                                                                            color: blue;
+    background-color: white;                                                                             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+                                                                                                     /* Alert */
+.alert {
+    background: #e6f4ea;                                                                                 color: #389f42;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Form */
+.form {
+    padding: 10px 0;
+}
+
+.input,
+.select {
+    width: 96%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: blue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:disabled {
+    background: #d6cfff;
+    cursor: not-allowed;
+}                                                                                                                                                                                                                          /* Recent Section */                                                                                                                   .recent-section {
+    margin: 20px 0;
+}
+
+.recent-tabs {                                                                                                            display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.recent-tab {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.recent-tab.active {
+    color: blue;
+    border-bottom-color: #e7f3ff;
+}
+
+.recent-list {
+    margin: 10px 0;
+}
+
+.recent-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;                                                                                                         border-radius: 50%;
+    background: #ddd;                                                                                                     display: flex;
+    justify-content: center;                                                                                              align-items: center;
+    margin-right: 10px;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skyways-icon {
+    background: #e7f3ff;;
+}
+                                                                                                                      .name {
+    font-size: 14px;
+    font-weight: bold;                                                                                                    margin: 0;
+}
+                                                                                                                      .details {
+    font-size: 12px;                                                                                                      color: #666;
+}
+                                                                                                                      /* Transfer Button */
+.transfer-btn {                                                                                                           background: #blue;  /* Light blue transfer button */                                                 border: none;
+    border-radius: 10px;                                                                                                  color: black;  /* Text color for transfer button */
+    cursor: pointer;                                                                                                      padding: 12px;
+    width: 100%;                                                                                                          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.transfer-btn:hover {                                                                                                     background: #0099cc;  /* Darker light blue on hover */                                                            }        /* Include your CSS styles here */

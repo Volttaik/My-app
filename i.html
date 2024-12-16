@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif; /* Removed the Roboto font */
+            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Blue gradient background */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Add cool background shapes */
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .background-shapes .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            animation: moveCircle 8s infinite ease-in-out;
+        }
+
+        .background-shapes .polygon {
+            position: absolute;
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            background-color: rgba(255, 255, 255, 0.1);
+            animation: movePolygon 8s infinite ease-in-out;
+        }
+
+        /* Circle Animation */
+        @keyframes moveCircle {
+            0% { transform: translateX(-50%) translateY(-50%); }
+            25% { transform: translateX(50%) translateY(-50%); }
+            50% { transform: translateX(50%) translateY(50%); }
+            75% { transform: translateX(-50%) translateY(50%); }
+            100% { transform: translateX(-50%) translateY(-50%); }
+        }
+
+        /* Polygon Animation */
+        @keyframes movePolygon {
+            0% { transform: translateX(50%) translateY(50%); }
+            25% { transform: translateX(-50%) translateY(50%); }
+            50% { transform: translateX(-50%) translateY(-50%); }
+            75% { transform: translateX(50%) translateY(-50%); }
+            100% { transform: translateX(50%) translateY(50%); }
+        }
+
+        .container {
+            background-color: #ffffff;
+            color: #333333;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 700px; /* Ensure container width stretches */
+            max-width: 800px; /* Set max-width to prevent container from expanding */
+            padding: 50px 40px; /* Adjust padding */
+            text-align: center;
+            height: auto;
+            position: relative;
+            overflow: hidden; /* Prevent the container from expanding */
+            z-index: 1;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+            color: #1e3c72;
+            font-size: 28px;
+        }
+
+        .container label {
+            display: block;
+            text-align: left;
+            font-size: 16px;
+            margin: 15px 0 5px;
+        }
+
+        .container input {
+            width: 250px; /* Set the width of input fields to 200px */
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 2px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        .container input:focus {
+            border-color: #1e3c72;
+            box-shadow: 0 0 8px rgba(30, 60, 114, 0.5);
+            outline: none;
+        }
+
+        .container input::placeholder {
+            color: #888;
+            font-style: italic;
+        }
+
+        .container button {
+            width: 100%;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .container button:hover {
+            background: #163a59;
+        }
+
+        .container a {
+            color: #2a5298;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .container a:hover {
+            text-decoration: underline;
+        }
+
+        .message {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: none;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="circle" style="width: 150px; height: 150px; top: 10%; left: 20%;"></div>
+        <div class="circle" style="width: 100px; height: 100px; top: 60%; left: 80%;"></div>
+        <div class="polygon" style="width: 150px; height: 150px; top: 30%; left: 50%;"></div>
+        <div class="polygon" style="width: 200px; height: 200px; top: 70%; left: 10%;"></div>
+    </div>
+
+    <div class="container">
+        <h1>Register</h1>
+        <div id="error-message" class="message error"><?php echo isset($error_message) ? $error_message : ''; ?></div>
+        <div id="success-message" class="message success"><?php echo isset($success_message) ? $success_message : ''; ?></div>
+        <form method="POST" action="">
+            <input type="hidden" name="referrer_id" value="<?php echo htmlspecialchars($referrer_id); ?>">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p><a href="login.php">Already have an account? Login here</a></p>
+    </div>
+
+    <script>
+        // JavaScript to toggle success and error messages
+        const errorMessage = document.getElementById('error-message');
+        const successMessage = document.getElementById('success-message');
+
+        if (errorMessage.textContent.trim() !== '') {
+            errorMessage.classList.add('show');
+        }
+
+        if (successMessage.textContent.trim() !== '') {
+            successMessage.classList.add('show');
+        }
+    </script>
+</body>
+</html>
